@@ -1,0 +1,115 @@
+// for partials
+@use "partial";
+@use "sass:math";
+
+
+// variable declaration
+
+$primary-color: #45d818;
+$font-style: Helvetica, sans-serif;
+
+*{
+    text-align: center;
+}
+
+.varialbes{
+    background-color: rgb(109, 109, 218);
+}
+
+h1{
+    font: 100% $font-style;
+    color: $primary-color;
+}
+    
+p{
+    color: $primary-color;
+}
+
+// nesting
+.nesting{
+    background-color: crimson;
+    .nesting2{
+        font-style: italic;
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            display: inline-block;
+        }
+
+    }
+    
+    
+}
+
+
+// partials
+.partials{
+    border: partial.$partial-border-color;
+}
+
+// mixin
+@mixin theme($var1: red){
+    background: $var1;
+    box-shadow: 0 0 1px rgba($var1, .25);
+    color: #fff;
+}
+
+.r1{
+    @include theme;
+}
+
+.r2{
+    @include theme(blue);
+}
+
+.r3{
+    @include theme(green);
+}
+
+@mixin boxTheme($var1: 35px, $var2: red){
+    border: $var1 solid $var2;
+}
+.n-mixin{
+    p{
+        color: black
+    }
+}
+.mixin-n-params{
+    @include boxTheme;
+}
+.mixin-n-params2{
+    @include boxTheme(15px, green)
+}
+
+// extends
+%message-shared {
+    border: 5px solid #ccc;
+    padding: 10px;
+    color: #333;
+  }
+  .messageBox {
+    @extend %message-shared;
+  }
+  
+  .successBox {
+    @extend %message-shared;
+    border-color: green;
+  }
+  
+  .errorBox {
+    @extend %message-shared;
+    border-color: red;
+  }  
+
+// operation
+.operation-division{
+    margin: 10px + 2px;
+    padding: math.div(3px, 1px) * 2%;
+    // width: 1in % 9px;
+    height: 5 * 3px;
+    background-color: #901786;
+}
+

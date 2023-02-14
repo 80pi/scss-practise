@@ -1,0 +1,86 @@
+* {
+  text-align: center;
+}
+
+.varialbes {
+  background-color: rgb(109, 109, 218);
+}
+
+h1 {
+  font: 100% Helvetica, sans-serif;
+  color: #45d818;
+}
+
+p {
+  color: #45d818;
+}
+
+.nesting {
+  background-color: crimson;
+}
+.nesting .nesting2 {
+  font-style: italic;
+}
+.nesting .nesting2 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nesting .nesting2 li {
+  display: inline-block;
+}
+
+.partials {
+  border: 5px solid rgb(199, 69, 190);
+}
+
+.r1 {
+  background: red;
+  box-shadow: 0 0 1px rgba(255, 0, 0, 0.25);
+  color: #fff;
+}
+
+.r2 {
+  background: blue;
+  box-shadow: 0 0 1px rgba(0, 0, 255, 0.25);
+  color: #fff;
+}
+
+.r3 {
+  background: green;
+  box-shadow: 0 0 1px rgba(0, 128, 0, 0.25);
+  color: #fff;
+}
+
+.n-mixin p {
+  color: black;
+}
+
+.mixin-n-params {
+  border: 35px solid red;
+}
+
+.mixin-n-params2 {
+  border: 15px solid green;
+}
+
+.errorBox, .successBox, .messageBox {
+  border: 5px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.successBox {
+  border-color: green;
+}
+
+.errorBox {
+  border-color: red;
+}
+
+.operation-division {
+  margin: 12px;
+  padding: 6%;
+  height: 15px;
+  background-color: #901786;
+}/*# sourceMappingURL=main.css.map */
